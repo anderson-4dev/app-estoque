@@ -1,8 +1,5 @@
 package view.cliente;
 
-import components.inputs.Input;
-import components.inputs.InputCNPJ;
-import components.inputs.InputCPF;
 import control.ClienteControl;
 import control.LogradouroControl;
 import java.awt.event.ActionEvent;

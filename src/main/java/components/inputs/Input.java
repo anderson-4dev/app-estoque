@@ -2,10 +2,6 @@ package components.inputs;
 
 import Helpers.MaxCaracters;
 import java.awt.Color;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import javax.swing.JFormattedTextField;
-import javax.swing.JTextField;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 
