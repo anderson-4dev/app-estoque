@@ -1,7 +1,7 @@
 # app-estoque
 Sistema gerenciador de estoque para pequenos comércios.
 
-#app-estoque
+# app-estoque
 - Cadastrar
     - Clientes - ok
     - Produtos - ok
