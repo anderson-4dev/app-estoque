@@ -76,7 +76,7 @@ public class FormCliente extends javax.swing.JDialog {
         iCpf = new components.inputs.Input();
         inputSelectSexo = new components.selecter.InputSelect();
         iNascimento = new components.inputs.InputDate();
-        iTelefone = new components.inputs.InputTelefone();
+        iTelefone = new components.inputs.InputCelular();
         iCep = new components.inputs.InputCep();
         isLogradouro = new components.selecter.InputSelectButton();
         iNumero = new components.inputs.Input();
@@ -435,7 +435,7 @@ public class FormCliente extends javax.swing.JDialog {
     private components.inputs.Input iNumero;
     private components.inputs.TextArea iObservacoes;
     private components.inputs.Input iPontoReferencia;
-    private components.inputs.InputTelefone iTelefone;
+    private components.inputs.InputCelular iTelefone;
     private javax.swing.JCheckBox ibInativo;
     private javax.swing.JCheckBox ibLiberaCredito;
     private components.selecter.InputSelect inputSelectNatureza;

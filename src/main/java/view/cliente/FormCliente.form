@@ -184,7 +184,7 @@
             <Property name="inputLabel" type="java.lang.String" value="Nascimento"/>
           </Properties>
         </Component>
-        <Component class="components.inputs.InputTelefone" name="iTelefone">
+        <Component class="components.inputs.InputCelular" name="iTelefone">
           <Properties>
             <Property name="inputLabel" type="java.lang.String" value="Telefone"/>
             <Property name="inputText" type="java.lang.String" value=""/>

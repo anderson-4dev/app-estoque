@@ -75,7 +75,7 @@ public class FormFornecedor extends javax.swing.JDialog {
         jTable = new javax.swing.JTable();
         iContato = new components.inputs.Input();
         iObservacao = new components.inputs.TextArea();
-        iTelefone = new components.inputs.InputTelefone();
+        iTelefone = new components.inputs.InputCelular();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Fornecedores");
@@ -382,7 +382,7 @@ public class FormFornecedor extends javax.swing.JDialog {
     private components.inputs.Input iContato;
     private components.inputs.Input iNome;
     private components.inputs.TextArea iObservacao;
-    private components.inputs.InputTelefone iTelefone;
+    private components.inputs.InputCelular iTelefone;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable;

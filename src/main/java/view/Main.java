@@ -7,6 +7,7 @@ import view.categoria.FormCategoria;
 import view.cidade.FormCidade;
 import view.fornecedor.FormFornecedor;
 import view.cliente.ListCliente;
+import view.empresa.FormEmpresa;
 import view.gerente.FormGerente;
 import view.logradouro.ListLogradouro;
 import view.produto.ListProduto;
@@ -57,7 +58,7 @@ public class Main extends javax.swing.JFrame {
         jMnUsuarios = new javax.swing.JMenuItem();
         jFaturamento = new javax.swing.JMenu();
         jConfiguracoes = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        jMnEmpresa = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuSair = new javax.swing.JMenuItem();
 
@@ -216,15 +217,15 @@ public class Main extends javax.swing.JFrame {
         jConfiguracoes.setText("Configurações");
         jConfiguracoes.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
 
-        jMenuItem9.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        jMenuItem9.setForeground(new java.awt.Color(255, 0, 0));
-        jMenuItem9.setText("Empresa");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        jMnEmpresa.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jMnEmpresa.setForeground(new java.awt.Color(0, 0, 0));
+        jMnEmpresa.setText("Empresa");
+        jMnEmpresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                jMnEmpresaActionPerformed(evt);
             }
         });
-        jConfiguracoes.add(jMenuItem9);
+        jConfiguracoes.add(jMnEmpresa);
 
         jMenuItem10.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jMenuItem10.setForeground(new java.awt.Color(255, 0, 0));
@@ -319,9 +320,11 @@ public class Main extends javax.swing.JFrame {
         dialog.setVisible(true);
     }//GEN-LAST:event_jMnUsuariosActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
+    private void jMnEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnEmpresaActionPerformed
+        FormEmpresa dialog = new FormEmpresa(new javax.swing.JFrame(), true);
+        dialog.loadForm(control.Main.EMPRESA_ID);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jMnEmpresaActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
         // TODO add your handling code here:
@@ -344,10 +347,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenu jFaturamento;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenuItem jMenuSair;
     private javax.swing.JMenuItem jMnCategorias;
     private javax.swing.JMenuItem jMnClientes;
+    private javax.swing.JMenuItem jMnEmpresa;
     private javax.swing.JMenuItem jMnFornecedores;
     private javax.swing.JMenu jMnFuncionarios;
     private javax.swing.JMenuItem jMnFuncionariosCaixa;

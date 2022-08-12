@@ -263,7 +263,7 @@
             <Property name="inputLabel" type="java.lang.String" value="Observa&#xe7;&#xe3;o"/>
           </Properties>
         </Component>
-        <Component class="components.inputs.InputTelefone" name="iTelefone">
+        <Component class="components.inputs.InputCelular" name="iTelefone">
           <Properties>
             <Property name="inputLabel" type="java.lang.String" value="Telefone"/>
           </Properties>

@@ -1,6 +1,7 @@
 package control;
 
 import model.Usuario;
+import view.empresa.FormEmpresa;
 
 /**
  *
@@ -9,7 +10,7 @@ import model.Usuario;
 public class Main {
     public static Usuario SESSION_USUARIO = new Usuario(1);
     public static String SESSION_DATE_TIME_INIT = Helpers.DataHora.CURRENT_DATE_TIME_STRING;
-    
+    public static int EMPRESA_ID = 1;
     
     /**
      * @param args the command line arguments

@@ -6,15 +6,15 @@ import javax.swing.text.MaskFormatter;
  *
  * @author ander
  */
-public class InputTelefone extends Input {
+public class InputCelular extends Input {
 
-    public InputTelefone() {
+    public InputCelular() {
         super();
         
         try {
             
             MaskFormatter formater = new MaskFormatter();
-            formater.setMask("(##) ####-####");
+            formater.setMask("(##) #####-####");
             formater.install(inputText);
             inputText.setHorizontalAlignment(javax.swing.JTextField.LEFT);
             

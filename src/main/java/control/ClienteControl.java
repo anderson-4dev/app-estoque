@@ -102,7 +102,7 @@ public class ClienteControl {
             
             cliente.setObservacoes(observacoes);
             cliente.setDataAlteracao(Helpers.DataHora.CURRENT_DATE_TIME_STRING);
-            cliente.setUsuario(new Usuario(1));
+            cliente.setUsuario(control.Main.SESSION_USUARIO);
             
             return this.dAo.save(cliente);
         }
@@ -110,9 +110,6 @@ public class ClienteControl {
         return false;
     }
 
-    public boolean delete(int id) {
-            return this.dAo.delete(id);
-    }
     
     private boolean validateValues( String nome){
          if(nome.equals("")){
@@ -122,6 +119,10 @@ public class ClienteControl {
         
         return true;
    }
+    
+    public boolean delete(int id) {
+            return this.dAo.delete(id);
+    }
     
     public void closeConection() {
         this.dAo.close();
