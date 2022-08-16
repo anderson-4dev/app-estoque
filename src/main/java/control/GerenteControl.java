@@ -59,7 +59,7 @@ public class GerenteControl {
             obj.setExcederLimite(excederLimite);
             obj.setLiberarTodasVendas(liberarTodasVendas);
             obj.setCancelarVenda(cancelarVenda);
-            obj.setUsuario(new Usuario(1));//pegar da sessão
+            obj.setUsuario(Main.SESSION_USUARIO);//pegar da sessão
             obj.setDataRegistro(Helpers.DataHora.CURRENT_DATE_TIME_STRING);
             
             return this.dAo.save(obj);

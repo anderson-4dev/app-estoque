@@ -39,7 +39,7 @@ public class FornecedorControl{
             Fornecedor fornecedor = new Fornecedor(id, nome, telefone, contato, observacoes);
 
             fornecedor.setRegistro(Helpers.DataHora.CURRENT_DATE_TIME_STRING);
-            fornecedor.setUsuario(new Usuario(1));//pegar da session
+            fornecedor.setUsuario(Main.SESSION_USUARIO);//pegar da session
 
             return this.dAo.save(fornecedor);
         

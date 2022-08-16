@@ -50,6 +50,10 @@ public class Vendedor {
         this.usuario = usuario;
     }
 
+    public Vendedor(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }

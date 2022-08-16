@@ -48,7 +48,7 @@ public class ProdutoControl {
             Produto produto = new Produto(id, nome, codBarras, fornecedor, categoria, unidade, valorCusto, valorVenda, estoqueInicial, estoqueMinimo, inativo, observacoes);
 
             produto.setRegistro(Helpers.DataHora.CURRENT_DATE_TIME_STRING);
-            produto.setUsuario(new Usuario(1));//pegar da session
+            produto.setUsuario(Main.SESSION_USUARIO);//pegar da session
 
             return this.dAo.save(produto);
         
