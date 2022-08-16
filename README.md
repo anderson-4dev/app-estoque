@@ -14,7 +14,7 @@ Sistema gerenciador de estoque para pequenos comércios.
     - Reimpressão
     - Cancelar Pedido
 - Configurações
-    - Empresa
+    - Empresa - ok
     - Paramêtros
     
 
