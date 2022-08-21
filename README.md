@@ -21,4 +21,7 @@ Sistema gerenciador de estoque para pequenos comércios.
 # Ajustes pedentes
 - Adcionar mascara de cpf ou cpnj no cadastro do cliente
 - validador de cpf ou cnpj caso o campo seja preenchido
+- Limitador de resultados não funciona
+- Adcionar no cadastro de unidades a opção venda fracionada para permitir um produto ser vendido por ponto flutuante ou não
+- Adcionar limite maximo de desconto 
 - ....

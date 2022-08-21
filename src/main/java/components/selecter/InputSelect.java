@@ -60,7 +60,7 @@ public class InputSelect extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(inputLabel)
-                .addGap(0, 0, 0)
+                .addGap(2, 2, 2)
                 .addComponent(jComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -147,6 +147,24 @@ public class InputSelect extends javax.swing.JPanel {
     public JComboBox getInput() {
         return jComboBox;
     }
+    
+    public void loadOptions(Object[] itens) {
+
+        int index = jComboBox.getSelectedIndex();
+        
+        this.jComboBox.removeAllItems();
+        
+        //jComboBox j = new JComboBox()
+        
+        this.carregar(itens);
+        
+        //int linha = (index > -1) ? index : 0;
+        
+        /**
+         * Seleciona o index
+         */
+        //jComboBox.setSelectedIndex((index > -1) ? index : 0);
+    }
 
     public void loadOptions(List<Object> itens) {
 
@@ -187,6 +205,14 @@ public class InputSelect extends javax.swing.JPanel {
         itens.forEach(item -> {
             jComboBox.addItem(item);
         });
+        
+    }
+    
+    private void carregar(Object[] items){
+        
+        for(int i = 0; i < items.length; i++){
+            jComboBox.addItem(items[i]);
+        }
         
     }
 

@@ -84,14 +84,14 @@ public abstract class GenericDAO <T>{
     
     /**
      *
-     * @param column_order
-     * @param order
+     * @param column
+     * @param value
      * @param limit
      * @return 
      */
-    public List<T> getAll(String column_order, String order, int limit){
-        
-        return this.em.createQuery("FIRST " + limit + " * FROM " + this.classe.getSimpleName() + " O ORDER BY" + " LOWER(O."+column_order+") " + order ).getResultList();
+    public List<T> getAll(String column, String value, int limit){
+        //return this.em.createQuery("SELECT FIRST " + limit + " * FROM " + this.classe.getSimpleName() + " O WHERE LOWER(O."+ column + ") LIKE LOWER('" + value + "%') ORDER BY" + " LOWER(O."+column+") " + order ).getResultList();
+        return this.getQuery("FROM " + this.classe.getSimpleName() + " O WHERE LOWER(O."+ column + ") LIKE LOWER('" + value + "%') ORDER BY" + " LOWER(O."+column+") ASC");
     }
     
     public List<T> getQuery(String query){

@@ -57,6 +57,7 @@ public class Main extends javax.swing.JFrame {
         jMnFuncionariosCaixa = new javax.swing.JMenuItem();
         jMnUsuarios = new javax.swing.JMenuItem();
         jFaturamento = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jConfiguracoes = new javax.swing.JMenu();
         jMnEmpresa = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -211,6 +212,23 @@ public class Main extends javax.swing.JFrame {
 
         jFaturamento.setForeground(new java.awt.Color(0, 0, 0));
         jFaturamento.setText("Faturamento");
+        jFaturamento.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jFaturamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFaturamentoActionPerformed(evt);
+            }
+        });
+
+        jMenuItem1.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        jMenuItem1.setForeground(new java.awt.Color(0, 0, 0));
+        jMenuItem1.setText("Pedido");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jFaturamento.add(jMenuItem1);
+
         jMenuBar1.add(jFaturamento);
 
         jConfiguracoes.setForeground(new java.awt.Color(0, 0, 0));
@@ -340,12 +358,21 @@ public class Main extends javax.swing.JFrame {
         dialog.setVisible(true);
     }//GEN-LAST:event_jMnFuncionariosCaixaActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        new view.pedido.FormPedido(new javax.swing.JFrame(),true).setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jFaturamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFaturamentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFaturamentoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jCadastrar;
     private javax.swing.JMenu jConfiguracoes;
     private javax.swing.JMenu jFaturamento;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuSair;
     private javax.swing.JMenuItem jMnCategorias;

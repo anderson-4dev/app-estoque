@@ -2,6 +2,7 @@ package components.inputs;
 
 import Helpers.MaxCaracters;
 import java.awt.Color;
+import javax.swing.JTextField;
 import javax.swing.text.DefaultFormatterFactory;
 import javax.swing.text.MaskFormatter;
 
@@ -23,7 +24,16 @@ public class Input extends javax.swing.JPanel {
      */
     public Input() {
         initComponents();
+        
         this.readOnly(false);
+        
+//        this.addFocusListener(new java.awt.event.FocusAdapter() {
+//            public void focusGained(java.awt.event.FocusEvent evt) {
+//                inputText.requestFocus();
+//                System.out.println("componente ganhou focus");
+//                //inputText.selectAll();
+//            }
+//        });
     }
 
     /**
@@ -39,6 +49,11 @@ public class Input extends javax.swing.JPanel {
         inputText = new javax.swing.JFormattedTextField();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                formFocusGained(evt);
+            }
+        });
 
         inputLabel.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         inputLabel.setForeground(new java.awt.Color(42, 77, 104));
@@ -53,8 +68,15 @@ public class Input extends javax.swing.JPanel {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 inputTextFocusGained(evt);
             }
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                inputTextFocusLost(evt);
+        });
+        inputText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputTextActionPerformed(evt);
+            }
+        });
+        inputText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                inputTextKeyPressed(evt);
             }
         });
 
@@ -80,10 +102,20 @@ public class Input extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_inputTextFocusGained
 
-    private void inputTextFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputTextFocusLost
-        
-    }//GEN-LAST:event_inputTextFocusLost
+    private void inputTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTextActionPerformed
+        this.transferFocus();
+    }//GEN-LAST:event_inputTextActionPerformed
 
+    private void formFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_formFocusGained
+        this.inputText.requestFocus();
+    }//GEN-LAST:event_formFocusGained
+
+    private void inputTextKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inputTextKeyPressed
+        if(Helpers.TeclasAtalho.TECLA_ENTER(evt)){
+            this.transferFocus();
+        }
+    }//GEN-LAST:event_inputTextKeyPressed
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     protected javax.swing.JLabel inputLabel;
@@ -126,6 +158,10 @@ public class Input extends javax.swing.JPanel {
     public String getInputText() {
         return inputText.getText();
     }
+    
+    public JTextField getInput(){
+        return inputText;
+    }
 
     public void setInputText(String inputText) {
         this.inputText.setText(inputText);
@@ -157,6 +193,7 @@ public class Input extends javax.swing.JPanel {
     */
     public void readOnly(boolean readOnly){
         this.inputText.setEditable(!readOnly);
+        this.inputText.setFocusable(!readOnly);
         
         if(!readOnly){
             this.inputText.setBackground(DEFAULT_BACKGROUND);
@@ -172,5 +209,9 @@ public class Input extends javax.swing.JPanel {
     public void enableDataInput(boolean enabled){
         this.readOnly(!enabled);
         this.setInputText(this.inputDefaultText);
+    }
+
+    public void focus() {
+        this.requestFocus();
     }
 }

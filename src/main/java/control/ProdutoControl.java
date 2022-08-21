@@ -3,6 +3,7 @@ package control;
 import java.util.List;
 import javax.swing.JOptionPane;
 import model.Categoria;
+import model.Cliente;
 import model.Fornecedor;
 import model.Produto;
 import model.Unidade;
@@ -27,6 +28,15 @@ public class ProdutoControl {
      **/
     public List<Produto> getDBAll(){
         return new ProdutoDao().getAll();
+    }
+    
+    /**
+     * Busca até 100 produtos com a descrição informada
+     * @param descricao String
+     * @return 
+     */
+    public List<Produto> getAll(String descricao){
+        return this.dAo.getAll("nome", descricao, 100);
     }
     
     public boolean save(

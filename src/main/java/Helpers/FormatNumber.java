@@ -8,6 +8,13 @@ import java.text.DecimalFormat;
  */
 public class FormatNumber {
     
+    /**
+     * Formata um numero double para o padrão de moeda
+     * Padrão do sistema do tem que ser BR.
+     * 
+     * @param valor
+     * @return Ex.125.49 -> 125,49 ou 1457.99 -> 1.457,99
+     */
     public static String formatDouble (Double valor){
         return new DecimalFormat("#,##0.00##").format(valor);//#,##0.00##
     }

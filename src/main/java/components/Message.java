@@ -3,6 +3,7 @@
  */
 package components;
 
+import Helpers.TeclasAtalho;
 import java.awt.event.KeyEvent;
 import javax.swing.JComponent;
 import javax.swing.KeyStroke;
@@ -19,6 +20,7 @@ public class Message extends javax.swing.JDialog {
     public Message(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
         btnFechar.requestFocus();
         
         //rotina para o dialog fechar com a tecla ESC
@@ -58,6 +60,11 @@ public class Message extends javax.swing.JDialog {
         btnFechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFecharActionPerformed(evt);
+            }
+        });
+        btnFechar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                btnFecharKeyReleased(evt);
             }
         });
 
@@ -109,6 +116,12 @@ public class Message extends javax.swing.JDialog {
     private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnFecharActionPerformed
+
+    private void btnFecharKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnFecharKeyReleased
+        if(TeclasAtalho.TECLA_ESC(evt)){
+            this.dispose();
+        }
+    }//GEN-LAST:event_btnFecharKeyReleased
 
     /**
      * @param args the command line arguments
