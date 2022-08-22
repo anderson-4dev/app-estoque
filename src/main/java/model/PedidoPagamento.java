@@ -43,7 +43,7 @@ public class PedidoPagamento {
         this.valor = valor;
     }
     
-    public PedidoPagamento(int id, Pedido pedido, Modalidade modalidade, double valor) {
+    public PedidoPagamento(Pedido pedido, Modalidade modalidade, double valor) {
         this.id = id;
         this.pedido = pedido;
         this.modalidade = modalidade;

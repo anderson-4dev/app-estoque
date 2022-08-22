@@ -31,14 +31,16 @@ public class Pedido {
     private Vendedor vendedor;
     
     @Column
-    private String status;
+    private String status;//A - 
+    
+    @Column
+    private String data;//A - 
     
     @Column
     private String registro;//timestamp
     
     @Column
     private String faturamento;//timestamp
-    
     
     @Column
     private String cancelamento;//timestamp
@@ -62,6 +64,7 @@ public class Pedido {
 
     public Pedido() {
         this.items = new ArrayList();
+        //
     }
 
     public Pedido(int id) {
@@ -69,74 +72,6 @@ public class Pedido {
         this.items = new ArrayList();
     }
 
-    public Pedido(Cliente cliente, Usuario usuario, Vendedor vendedor, String status, String registro, String faturamento, String cancelamento, double total, double descontos, String observacoes, List<PedidoItem> items, List<PedidoPagamento> pagamentos) {
-        this.cliente = cliente;
-        this.usuario = usuario;
-        this.vendedor = vendedor;
-        this.status = status;
-        this.registro = registro;
-        this.faturamento = faturamento;
-        this.cancelamento = cancelamento;
-        this.total = total;
-        this.descontos = descontos;
-        this.observacoes = observacoes;
-        this.items = items;
-        this.pagamentos = pagamentos;
-    }
-
-    public Pedido(int id, Cliente cliente, Usuario usuario, Vendedor vendedor, String status, String registro, String faturamento, String cancelamento, double total, double descontos, String observacoes, List<PedidoItem> items, List<PedidoPagamento> pagamentos) {
-        this.id = id;
-        this.cliente = cliente;
-        this.usuario = usuario;
-        this.vendedor = vendedor;
-        this.status = status;
-        this.registro = registro;
-        this.faturamento = faturamento;
-        this.cancelamento = cancelamento;
-        this.total = total;
-        this.descontos = descontos;
-        this.observacoes = observacoes;
-        this.items = items;
-        this.pagamentos = pagamentos;
-    }
-    
-    /**
-     * Para registro de pedido novo
-     * 
-     * @param cliente
-     * @param usuario
-     * @param vendedor
-     * @param status
-     * @param observacoes
-     * @param total
-     * @param descontos
-     * @param registro
-     * @param items
-     * @param pgts
-     */
-    public Pedido(Cliente cliente, Usuario usuario, Vendedor vendedor, String status, String registro, double total, double descontos, String observacoes, List<PedidoItem> items, List<PedidoPagamento> pgts) {
-        this.cliente = cliente;
-        this.usuario = usuario;
-        this.vendedor = vendedor;
-        this.status = status;
-        this.registro = registro;
-        this.total = total;
-        this.descontos = descontos;
-        this.observacoes = observacoes;
-        this.items = items;
-        this.pagamentos = pgts;
-    }
-
-    public Pedido(Cliente cliente, Usuario usuario, Vendedor vendedor, String status, String registro, double totalPedido, double descontos, String observacoes) {
-        this.cliente = cliente;
-        this.usuario = usuario;
-        this.vendedor = vendedor;
-        this.status = status;
-        this.registro = registro;
-        this.total = total;
-        this.descontos = descontos;
-        this.observacoes = observacoes;
-    }
 
     public int getId() {
         return id;
@@ -233,6 +168,23 @@ public class Pedido {
     public void setPagamentos(List<PedidoPagamento> pagamentos) {
         this.pagamentos = pagamentos;
     }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public String getObservacoes() {
+        return observacoes;
+    }
+
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
+    }
+    
     
     
 }

@@ -1,5 +1,6 @@
 package control;
 
+import model.Cliente;
 import model.Usuario;
 
 /**
@@ -11,6 +12,7 @@ public class Main {
     public static String SESSION_DATE_TIME_INIT = Helpers.DataHora.CURRENT_DATE_TIME_STRING;
     public static int EMPRESA_ID = 1;
     public static double DESCONTO_MAXIMO_GERENTE = (10/100);//10%
+    public static Cliente CLIENTE_PADRAO = new Cliente(1);
     
     /**
      * @param args the command line arguments

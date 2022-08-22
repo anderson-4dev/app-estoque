@@ -13,7 +13,8 @@ import javax.swing.KeyStroke;
  * @author ander
  */
 public class Message extends javax.swing.JDialog {
-
+    
+    
     /**
      * Creates new form Message
      */

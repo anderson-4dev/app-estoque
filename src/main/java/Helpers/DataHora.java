@@ -59,6 +59,15 @@ public class DataHora {
     public static String parseDateToDateBr(Date data){
         return setFormat("dd/MM/yyyy").format(data);
     }
+    
+    /**
+     * Passa String date dd/MM/yyyy para 
+     * @param data
+     * @return String yyyy-MM-dd
+     */
+    public static String parseDateStringBrToDateDataBase(String data){
+        return parseDateToStringDataBase(parseStringToDate(data));
+    }
 
     /**
      * Transforma String data dd/MM/yyyy em Date
